@@ -19,7 +19,7 @@
             "url": "https://packages.3r.media"
         }
     ],
-    "homepage": "https://github.com/rrr/dev-stack",
+    "homepage": "https://github.com/3r-media/dev-stack",
     "keywords": ["Laravel", "3r.Media", "Rrr", "DevStack"],
     "require": {
         "php": "^8.3",
