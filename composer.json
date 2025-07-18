@@ -1,0 +1,67 @@
+{
+    "name": "rrr/dev-stack",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aubrey Robertson",
+            "email": "aubrey@disciplego.com",
+            "homepage": "https://3r.media"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../genesis"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.3r.media"
+        }
+    ],
+    "homepage": "https://github.com/rrr/dev-stack",
+    "keywords": ["Laravel", "3r.Media", "Rrr", "DevStack"],
+    "require": {
+        "php": "^8.3",
+        "illuminate/contracts": "^12.0",
+        "barryvdh/laravel-debugbar": "^3.15",
+        "fakerphp/faker": "^1.23",
+        "laravel/pail": "^1.2.2",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.41",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-arch": "^3.1",
+        "pestphp/pest-plugin-faker": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.1",
+        "pestphp/pest-plugin-livewire": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rrr\\DevStack\\": "src/",
+            "Rrr\\DevStack\\Database\\Factories\\": "database/factories/",
+            "Rrr\\DevStack\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rrr\\DevStack\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rrr\\DevStack\\DevStackServiceProvider"
+            ],
+            "aliases": {
+                "DevStack": "Rrr\\DevStack\\Facades\\DevStack"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
